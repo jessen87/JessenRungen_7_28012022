@@ -4,7 +4,9 @@ const jwt = require('jsonwebtoken'); // jsonwebtoken
 let posts = new postsR();
 
 exports.createPost = async (req, res, next) => {
-    let userId = req.body.userId;
+    const token = req.headers.authorization.split(' ')[1];
+    const decodedToken = jwt.verify(token, 'RANDOM_TOKEN_SECRET');
+    const userId = decodedToken.userId;
     let text = req.body.text;
     let dataCreatePost = [userId, text];
     posts.createPost(dataCreatePost)

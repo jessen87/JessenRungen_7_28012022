@@ -7,7 +7,9 @@ let userdb = new User();
 
 // Inscription
 exports.signup = async (req, res, next) => {
-    let name = req.body.name; let email = req.body.email; let password = req.body.password;
+    let name = req.body.name;
+    let email = req.body.email; 
+    let password = req.body.password;
     const emailMaskOptions = { maskWith: "*", unmaskedStartCharactersBeforeAt: 5, unmaskedEndCharactersAfterAt: 5, maskAtTheRate: false};
     const emailMask = MaskData.maskEmail2(email, emailMaskOptions);
     bcrypt.hash(password, 15) // Récupère le mot de passe et le hash > 15 passages /

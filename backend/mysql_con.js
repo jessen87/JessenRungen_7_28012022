@@ -8,8 +8,11 @@ let con = mysql.createConnection({
 });
 
 con.connect(function(err) { 
-    if (err) { console.log("Connexion à la BDD impossible. " + err); }
-    console.log("Connexion BDD : OK.");
+    if (err) { 
+        console.log("Connexion à la BDD impossible. " + err); 
+    } else {
+        console.log("Connexion BDD : OK.");   
+    }
 });
 
 module.exports = con;
