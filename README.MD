@@ -11,15 +11,9 @@ NodeJs - VueJs - MySQL - Bootstrap - Sass
 ______________________________________________
 
 
-
-Installer les bases de données MySQL
-
-______________________________________________
-
-
 Backend:
 
-1.Ouvrez votre terminal de commandes et accèdez au dossier backend: `cd backend``
+1.Ouvrez votre terminal de commandes et accèdez au dossier backend: `cd backend`
 2.Exécutez la commande `npm install`
 3.Exécutez la commande `node server`
 ______________________________________________
